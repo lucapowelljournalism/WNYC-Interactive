@@ -2,7 +2,10 @@ function addDataBox2 (i, finding) {
 
 	//Make box with class tooltip//
 	const newBox = 	document.createElement("div");
-	$(newBox).addClass("tooltip highlight fade-in");
+	$(newBox).addClass("tooltip highlight");
+	setTimeout(() => {
+		$(newBox).addClass("fade-in");
+	}, 250);
 
 	//Add p element with class tooltiptext to the box
 	let misconductPTag = document.createElement("p");
@@ -32,8 +35,13 @@ function writeData (data) {
 
 counter = 0 //Keeps track of where the visualization is.
 
-function Visualize(){
-	counter=counter + 1
+function Visualize(id = false){
+		if(id){
+			counter = id
+		} else {
+			counter=counter + 1
+		}
+	
 
 	if (counter === 1){
 		writeData(force_data);
@@ -83,3 +91,13 @@ function Visualize(){
 	}
 	/// Add remaining Data groups
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll(".slide_trigger").forEach(s => {
+		new Watch(s).inView(() => {
+			Visualize(s.dataset.id);
+			//update caption and boxes
+			console.log('asdf')
+		})
+	});
+});
