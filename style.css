@@ -5,8 +5,8 @@
 
 body {
     font-size: 15px/1.5 Arial;
-    background-color:white;
-    color: black;
+    background-color:black;
+    color: white;
     overflow-x:hidden;
     font-family: 'Gotham A', 'Gotham B', Helvetica, Arial, sans-serif;
 }
@@ -79,7 +79,6 @@ body {
     .mobile-explainer {
         display:block;
         text-align: center;
-
     }
 
     .desktop-explainer{
@@ -88,29 +87,80 @@ body {
 
     }
 
+    /**** Buttons *****/
+
+    .vizbuttons{
+        max-width: 60%;
+        margin: 0 auto;
+        margin-top: 30px;
+        text-align: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    .vizbuttons li{
+        flex: auto;
+        width: 30px;
+    }
+
+    button {
+        width: 80px;
+    }
+
+    .fade-in {
+        animation: ease-in-out  20s;
+        -webkit-animation: ease-in-out  20s;
+        -moz-animation: fadeIn ease 20s;
+        -o-animation: fadeIn ease 20s;
+        -ms-animation: fadeIn ease 20s;
+    }
+
     .graphic {
-        background-color: black;
-        width: 80%;
-        height: 400px;
-        margin: auto;
+        background-color: whitesmoke;
+        width: 85%;
+        max-height: 1150px;
         text-align: center;
         vertical-align: middle;
         text-transform: translate(-50%, -50%);
         /*display: flex;
         flex-wrap: wrap;*/
-        justify-content: space-between;
+        justify-content: space-around;
         margin-top: 30px;
     }
 
-    /*.graphic div {
-        flex-basis: 2px;
-        background-color: white;
-        padding: 5px;
-        margin: 6px;
-    }*/
+    .tooltip {
+        background-color: black;
+        padding: 7.5px;
+        height: 1px;
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+        margin-top: 2.5px;
+     }
+
+    .green {
+        background-color: yellowgreen;
+    }
+
+    .pink {
+        background-color: pink;
+    }
+
+    .highlight{
+        padding: 8.5px;
+        background-color: pink;
+        height: 2px;
+    }
 
     .graphic div:hover {
-        background-color: darkblue;
+        background-color: lightskyblue;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .caption {
+        margin-bottom: 20px;
     }
 
     /********* TOOLTIPS ***************/
@@ -226,7 +276,7 @@ body {
         text-decoration: underline;
         color: white;
 
-    }*/
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -344,7 +394,7 @@ body {
     /*****  INTERACTIVES  **************/
 
     .graphic {
-        background-color: white;
+        background-color: black;
         width: 90%;
         height: 450px;
         text-align: center;
@@ -357,7 +407,7 @@ body {
     }
 
     .tooltip {
-        background-color: black;
+        background-color: whitesmoke;
         padding: 7.5px;
         height: 1px;
         margin-left: 2.5px;
@@ -388,7 +438,9 @@ body {
     }
 
     .caption {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 1%;
     }
     /********* TOOLTIPS ***************/
 
