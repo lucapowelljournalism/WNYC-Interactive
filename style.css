@@ -5,8 +5,8 @@
 
 body {
     font-size: 15px/1.5 Arial;
-    background-color:black;
-    color: white;
+    background-color:white;
+    color: black;
     overflow-x:hidden;
     font-family: 'Gotham A', 'Gotham B', Helvetica, Arial, sans-serif;
 }
@@ -109,24 +109,16 @@ body {
 
 
     .graphic {
-        background-color: whitesmoke;
+        background-color: white;
         width: 85%;
+        min-height: 450px;
         max-height: 1150px;
-        text-align: center;
         vertical-align: middle;
         text-transform: translate(-50%, -50%);
         /*display: flex;
         flex-wrap: wrap;*/
         justify-content: space-around;
         margin-top: 30px;
-        position: relative;
-    }
-
-    .sticky{
-        position: sticky;
-        top: 0;
-        z-index: 2;
-        min-height: 100vh;
     }
 
     .tooltip {
@@ -140,27 +132,11 @@ body {
         transition: opacity 0.5s ease-in-out;
      }
 
-     .slide_trigger{
-         height: 105vh;
-         z-index: 1;
-         position: relative;
-     }
 
-     /**
-     * calc(100%-1px)
-
-
-     .fade-in {
+    .fade-in {
         opacity: 1;
     }
 
-    .green {
-        background-color: yellowgreen;
-    }
-
-    .pink {
-        background-color: pink;
-    }
 
     .highlight{
         padding: 8.5px;
@@ -168,7 +144,7 @@ body {
         height: 2px;
     }
 
-    .graphic div:hover {
+    .graphic .tooltip:hover {
         background-color: lightskyblue;
     }
 
@@ -177,6 +153,7 @@ body {
     }
 
     .caption {
+        margin-top: 30px;
         margin-bottom: 20px;
     }
 
@@ -313,7 +290,7 @@ body {
         display: flex;
     }
     .title{
-        background-color: black;
+        background-color:white;
         width: 100%;
     }
     .title-text {
@@ -384,7 +361,6 @@ body {
     .vizbuttons{
         max-width: 60%;
         margin: 0 auto;
-        margin-top: 30px;
         text-align: center;
         align-items: center;
 
@@ -410,34 +386,33 @@ body {
 
     /*****  INTERACTIVES  **************/
 
+    .wrapper {
+        height: 100vh;
+        position:fixed;
+        width: 97%;
+
+    }
+
     .graphic {
-        background-color: black;
-        width: 90%;
+        background-color: white;
+        width: 70%;
         text-align: center;
         vertical-align: middle;
         text-transform: translate(-50%, -50%);
-        /*display: flex;
-        flex-wrap: wrap;*/
+        height: 70vh;
         justify-content: space-around;
         margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .tooltip {
-        background-color: whitesmoke;
-        padding: 7.5px;
+        background-color: crimson;
+        padding: 5.5px;
         height: 1px;
         margin-left: 2.5px;
         margin-right: 2.5px;
         margin-top: 2.5px;
      }
-
-    .green {
-        background-color: yellowgreen;
-    }
-
-    .pink {
-        background-color: pink;
-    }
 
     .highlight{
         padding: 8.5px;
@@ -445,7 +420,7 @@ body {
         height: 2px;
     }
 
-    .graphic div:hover {
+    .graphic .tooltip:hover {
         background-color: lightskyblue;
     }
 
@@ -458,6 +433,23 @@ body {
         padding: 10px;
         border-radius: 1%;
     }
+
+    /********* Scroll Spy *************/
+    .scroll-spy{
+        position: absolute;
+        height: 600vh;
+        left: 50%;
+    }
+    .scroll-spy div{
+        position: relative;
+        margin-top: 900px;
+        width: 600px;
+        left: -50%;
+    }
+
+
+
+
     /********* TOOLTIPS ***************/
 
     /* Tooltip container */
@@ -507,15 +499,21 @@ body {
     .key {
         background-color: white;
         display: flex;
-        align-items: center;
+        max-width: 400px;
     }
 
-    .key img{
-        color: white;
+    .key p{
+        font-size: 2em;
+        fill: white;
         max-width: 10px;
         padding: 10px;
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    .bullet.active {
+        color: pink;
+
     }
 
     /********** Database Styles *******/
